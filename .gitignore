@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Production build output
+dist/
+
+# Intermediate pipeline tools
+concat_list.txt
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+

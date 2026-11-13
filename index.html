@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ADIEU — Haute Parfumerie</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Minimalist Fixed Header -->
+    <header class="header">
+      <div class="brand-mark">ADIEU / PARFUM</div>
+      <div class="header-actions">
+        <span class="allocation-badge">Batch 01 · 300 Flacons</span>
+        <div class="scroll-progress-track">
+          <div class="scroll-progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Pinned Scroll-Driven Canvas Flight Stage -->
+      <section class="scroll-stage" id="scrollStage">
+        <canvas class="scroll-canvas" id="scrollCanvas"></canvas>
+        <!-- Living Idle Loops (Start & End) -->
+        <video class="idle-video active" id="idleStartVideo" autoplay loop muted playsinline>
+          <source src="./assets/vid/idle_start.webm" type="video/webm" />
+          <source src="./assets/vid/idle_start.mp4" type="video/mp4" />
+        </video>
+        <video class="idle-video" id="idleEndVideo" loop muted playsinline>
+          <source src="./assets/vid/idle_end.webm" type="video/webm" />
+          <source src="./assets/vid/idle_end.mp4" type="video/mp4" />
+        </video>
+
+        <!-- Majestic Hero Presentation (Fades cleanly as camera begins flight) -->
+        <div class="hero-intro" id="heroIntro">
+          <div class="hero-tag">EXTRAIT DE PARFUM · FIRST HARVEST ALLOCATION</div>
+          <h1 class="hero-title">ADIEU</h1>
+          <p class="hero-subtitle">An olfactory monument to the quiet beauty of departure.</p>
+          <div class="hero-accords">
+            <span class="accord-pill">Smoked Birch Tar</span>
+            <span class="accord-pill">Aged Cognac Resin</span>
+            <span class="accord-pill">Florentine Orris Butter</span>
+            <span class="accord-pill">Honed Travertine Mineral</span>
+          </div>
+          <div class="hero-scroll-cue">
+            <span>Scroll to Inspect the Vessel</span>
+            <div class="scroll-line-pulse"></div>
+          </div>
+        </div>
+
+        <!-- Narrative Overlay Cards (Fade in/out along orbit path) -->
+        <div class="narrative-overlay">
+          <!-- Chapter 01 -->
+          <article class="chapter-card" id="chapter-1" data-align="left">
+            <span class="chapter-eyebrow">Stage 01 — The Flacon</span>
+            <h2 class="chapter-title">Fluted Obsidian & Crystal</h2>
+            <p class="chapter-body">Heavy architectural crystal cut with vertical fluting, resting upon monolithic honed volcanic travertine.</p>
+            <div class="chapter-meta">
+              <span class="meta-pill">Heavy Crystal</span>
+              <span class="meta-pill">Hand-Polished</span>
+            </div>
+          </article>
+
+          <!-- Chapter 02 -->
+          <article class="chapter-card" id="chapter-2" data-align="right">
+            <span class="chapter-eyebrow">Stage 02 — The Essence</span>
+            <h2 class="chapter-title">Cognac Amber Glow</h2>
+            <p class="chapter-body">Aged macerated resins and deep golden extract catch the chiaroscuro light, radiating complex warmth.</p>
+            <div class="chapter-meta">
+              <span class="meta-pill">32% Extrait Concentration</span>
+              <span class="meta-pill">Cold-Macerated</span>
+            </div>
+          </article>
+
+          <!-- Chapter 03 -->
+          <article class="chapter-card" id="chapter-3" data-align="left">
+            <span class="chapter-eyebrow">Stage 03 — The Crown</span>
+            <h2 class="chapter-title">Brushed Champagne Brass</h2>
+            <p class="chapter-body">Precision-machined monolithic cap and atomiser collar, weighted to deliver an unbroken tactile seal.</p>
+            <div class="chapter-meta">
+              <span class="meta-pill">Solid Brass Plating</span>
+              <span class="meta-pill">Magnetic Lock</span>
+            </div>
+          </article>
+
+          <!-- Chapter 04 -->
+          <article class="chapter-card" id="chapter-4" data-align="center">
+            <span class="chapter-eyebrow">Stage 04 — The Final Note</span>
+            <h2 class="chapter-title">Poise & Equilibrium</h2>
+            <p class="chapter-body">A harmonious convergence of bittersweet memory: charred birch smoke, orris root, and sacred labdanum.</p>
+            <div class="chapter-meta">
+              <span class="meta-pill">Limited Edition</span>
+              <span class="meta-pill">Serial No. 001–300</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Floating Scroll Hint (appears if idle) -->
+        <div class="scroll-hint hidden" id="scrollHint">
+          <span>Scroll to Inspect</span>
+          <span>↓</span>
+        </div>
+      </section>
+
+      <!-- Creative Terminal Acquisition Experience -->
+      <section class="destination-section" id="destination">
+        <!-- Living Idle End Video Background -->
+        <div class="dest-bg-wrapper">
+          <video class="dest-bg-video" autoplay loop muted playsinline>
+            <source src="./assets/vid/idle_end.webm" type="video/webm" />
+            <source src="./assets/vid/idle_end.mp4" type="video/mp4" />
+          </video>
+          <div class="dest-bg-overlay"></div>
+        </div>
+
+        <div class="destination-container">
+          
+          <!-- Editorial Headline -->
+          <div class="dest-header">
+            <span class="dest-eyebrow">Atelier Reservation & Acquisition</span>
+            <h2 class="destination-headline">The Art of the Parting Glance.</h2>
+            <p class="destination-lead">Crafted for those who linger in memory long after they have gone. Each flacon is hand-filled, individually numbered, and sealed in our Grasse laboratory.</p>
+          </div>
+
+          <!-- Olfactory Architecture Accord Matrix -->
+          <div class="olfactory-matrix">
+            <div class="accord-card">
+              <div class="accord-phase">I. The Departure · Top</div>
+              <h3 class="accord-title">Bitter Bergamot & Smoke</h3>
+              <p class="accord-notes">Cracked Guatemalan cardamom, charred birch smoke, and crisp Calabrian bergamot zest ignite the senses.</p>
+            </div>
+            <div class="accord-card">
+              <div class="accord-phase">II. The Reverie · Heart</div>
+              <h3 class="accord-title">Cognac & Orris Butter</h3>
+              <p class="accord-notes">Aged 12-year French oak cognac resin, velvety Florentine orris root, and sun-dried golden osmanthus petals.</p>
+            </div>
+            <div class="accord-card">
+              <div class="accord-phase">III. The Monument · Base</div>
+              <h3 class="accord-title">Smoked Labdanum & Stone</h3>
+              <p class="accord-notes">Dark volcanic travertine mineral accord, Spanish labdanum resin, raw ambergris, and cedar embers.</p>
+            </div>
+          </div>
+
+          <!-- Interactive Vessel Format Selector -->
+          <div class="vessel-selection-area">
+            <div class="selection-title-row">
+              <span>Select Edition Format</span>
+              <span>Complimentary Worldwide Express</span>
+            </div>
+            <div class="vessel-grid">
+              <div class="vessel-option selected" data-price="$285" data-edition="The Monolith (100ml Extrait)">
+                <span class="vessel-tag">Core Vessel</span>
+                <h4 class="vessel-name">The Monolith · 100ml</h4>
+                <p class="vessel-desc">Heavy fluted crystal flacon with brushed champagne brass cap, resting in a charred cedar presentation box.</p>
+                <div class="vessel-price">$285</div>
+              </div>
+
+              <div class="vessel-option" data-price="$340" data-edition="The Atelier Coffret (100ml + 15ml Voyage)">
+                <span class="vessel-tag">Artisan Coffret</span>
+                <h4 class="vessel-name">The Atelier Coffret</h4>
+                <p class="vessel-desc">100ml Flacon plus a 15ml magnetic travel pocket atomiser and solid brass filling funnel.</p>
+                <div class="vessel-price">$340</div>
+              </div>
+
+              <div class="vessel-option" data-price="$65" data-edition="Olfactory Discovery Flight (3 x 5ml)">
+                <span class="vessel-tag">Sensory Sample</span>
+                <h4 class="vessel-name">Discovery Flight</h4>
+                <p class="vessel-desc">Three 5ml maceration trials. Includes a $65 credit voucher applicable toward your full 100ml flacon.</p>
+                <div class="vessel-price">$65</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bespoke Brass Plaque Engraving Studio -->
+          <div class="engraving-box">
+            <div class="engraving-inputs">
+              <label class="engraving-label" for="engravingInput">Complimentary Bespoke Engraving</label>
+              <input type="text" id="engravingInput" class="engraving-field" maxlength="14" placeholder="INITIALS OR DATE" value="A · V 1994" />
+              <p class="engraving-hint">Your inscription will be hand-chiseled onto the brushed champagne brass pedestal badge.</p>
+            </div>
+            <div class="plaque-preview">
+              <div class="plaque-brand">ADIEU · BESPOKE EDITION</div>
+              <div class="plaque-engraving" id="plaqueDisplay">A · V 1994</div>
+            </div>
+          </div>
+
+          <!-- Risk-Free Atelier Guarantee Strip -->
+          <div class="sample-guarantee-strip">
+            <div class="guarantee-icon">✦</div>
+            <div class="guarantee-text">
+              <h4>The "Test First, Break Seal Later" Atelier Policy</h4>
+              <p>Every flacon arrives with a complimentary 2ml matching sample vial attached outside the wax seal. Wear it for 48 hours on skin. If it does not become your signature, return the unopened monolith box for a complete, immediate refund.</p>
+            </div>
+          </div>
+
+          <!-- Creative Multi-Action CTA Cluster -->
+          <div class="cta-action-cluster">
+            <button class="cta-button-master" id="orderBtn">
+              <span id="ctaBtnText">Acquire The Monolith — $285</span>
+              <span>→</span>
+            </button>
+            <button class="cta-button-secondary" id="blotterBtn">
+              Request Complimentary Scent Blotter by Mail
+            </button>
+            <div class="allocation-footer-status">
+              <span class="status-dot"></span>
+              <span>86 of 300 bottles remaining in Harvest Allocation</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Interactive Feedback Toast -->
+    <div class="toast-msg" id="toastMsg"></div>
+
+    <script type="module">
+      import { initScrollWorld } from './engine.ts';
+
+      // Initialize the camera engine
+      initScrollWorld({
+        totalFrames: 762,
+        scrollDistancePx: 5200,
+        watermarkCropFactor: 1.02,
+        chapters: [
+          { id: 'chapter-1', start: 0.05, end: 0.24 },
+          { id: 'chapter-2', start: 0.29, end: 0.49 },
+          { id: 'chapter-3', start: 0.53, end: 0.73 },
+          { id: 'chapter-4', start: 0.77, end: 0.96 }
+        ]
+      });
+
+      // Interactive Vessel Selection
+      const vesselOptions = document.querySelectorAll('.vessel-option');
+      const ctaBtnText = document.getElementById('ctaBtnText');
+      let currentEdition = "The Monolith (100ml Extrait)";
+      let currentPrice = "$285";
+
+      vesselOptions.forEach((option) => {
+        option.addEventListener('click', () => {
+          vesselOptions.forEach((o) => o.classList.remove('selected'));
+          option.classList.add('selected');
+          currentEdition = option.getAttribute('data-edition') || "The Monolith";
+          currentPrice = option.getAttribute('data-price') || "$285";
+          const shortName = option.querySelector('.vessel-name')?.textContent || currentEdition;
+          if (ctaBtnText) {
+            ctaBtnText.textContent = `Acquire ${shortName} — ${currentPrice}`;
+          }
+        });
+      });
+
+      // Live Brass Engraving Plaque
+      const engravingInput = document.getElementById('engravingInput');
+      const plaqueDisplay = document.getElementById('plaqueDisplay');
+      if (engravingInput && plaqueDisplay) {
+        engravingInput.addEventListener('input', (e) => {
+          const val = e.target.value.trim();
+          plaqueDisplay.textContent = val.length > 0 ? val.toUpperCase() : 'ADIEU';
+        });
+      }
+
+      // Toast Notifications for CTAs
+      const toast = document.getElementById('toastMsg');
+      function showToast(message) {
+        if (!toast) return;
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 4200);
+      }
+
+      const orderBtn = document.getElementById('orderBtn');
+      if (orderBtn) {
+        orderBtn.addEventListener('click', () => {
+          const engraved = (engravingInput && engravingInput.value.trim()) || "Standard Monogram";
+          showToast(`✓ Allocation Secured: ${currentEdition} with inscription "${engraved}". Preparing atelier packaging.`);
+        });
+      }
+
+      const blotterBtn = document.getElementById('blotterBtn');
+      if (blotterBtn) {
+        blotterBtn.addEventListener('click', () => {
+          showToast(`✦ Complimentary scent blotter sealed in wax has been dispatched to your postal address.`);
+        });
+      }
+    </script>
+  </body>
+</html>
