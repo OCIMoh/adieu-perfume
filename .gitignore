@@ -1,6 +1,7 @@
 # Dependencies
 node_modules/
-
+# skills
+scroll-world/
 # Production build output
 dist/
 
